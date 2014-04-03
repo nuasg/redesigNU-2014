@@ -770,10 +770,13 @@ h1.section-title:after,
 }
 
 /* Main buttons Hover and current */
+.main_menu a {
+    transition: 0.1s;
+}
 .main_menu>li>.touch,
 .no-touch .main_menu>li:hover>a,
 .main_menu>li>.current {
-    border-bottom: 2px solid #fff;
+    color: #bbb;
 }
 
 /* All Dropdowns */
