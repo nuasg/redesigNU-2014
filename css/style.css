@@ -654,6 +654,7 @@ h1.section-title:after,
     font-size: 36px;
     font-weight: 600;
     padding-top: 23px;
+    margin: 0 0 18px;
 }
 
 .welcome .caption-logo {
@@ -2025,7 +2026,7 @@ div.light_square .pp_close {
 .schedule-table .time,
 .schedule-table .event {
     font-size: 27px;
-    color: #fff;
+    color: #222;
 }
 .schedule-table .time,
 .schedule-table .event {
