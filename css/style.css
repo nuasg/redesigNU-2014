@@ -2013,3 +2013,18 @@ div.light_square .pp_close {
 
   z-index: 9999;
 }
+
+
+.schedule-table {
+    margin: 0 auto;
+}
+.schedule-table .day,
+.schedule-table .time,
+.schedule-table .event {
+    font-size: 27px;
+    color: #fff;
+}
+.schedule-table .time,
+.schedule-table .event {
+    padding-left: 60px;
+}
