@@ -43,7 +43,7 @@
 
         $('html, body').animate({
             scrollTop: pos + offset
-        }, 2000, function() {
+        }, 600, function() {
             func();
         });
     };
