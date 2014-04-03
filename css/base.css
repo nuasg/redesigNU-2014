@@ -166,7 +166,9 @@ html, body {
 }
 
 body {
-    font: 14px/1.5 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
     color: #909090;
     font-weight: 300;
     -webkit-font-smoothing: antialiased;
@@ -184,7 +186,6 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 300;
     -webkit-font-smoothing: antialiased;
     margin-bottom: 10px;
-    letter-spacing: 1.1px;
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
