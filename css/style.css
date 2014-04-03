@@ -644,10 +644,16 @@ h1.section-title:after,
 }
 
 #registerbtn{
-
     margin-right: left;
     margin-right: left;
     text-align: center;
+    width: 400px;
+    height: 100px;
+    background-color: #5cb85c;
+    border-radius: 4px;
+    font-size: 36px;
+    font-weight: 600;
+    padding-top: 23px;
 }
 
 .welcome .caption-logo {
@@ -745,9 +751,9 @@ h1.section-title:after,
 /* Menu Buttons */
 .main_menu>li {
     display :inline-block;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 1;
-    padding: 23px 30px 21px 25px;
+    padding: 23px 18px 21px 12px;
 }
 
 .main_menu li:first-child:after {
