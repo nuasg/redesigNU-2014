@@ -2032,3 +2032,7 @@ div.light_square .pp_close {
 .schedule-table .event {
     padding-left: 60px;
 }
+
+#prizes img {
+    height: 200px;
+}
