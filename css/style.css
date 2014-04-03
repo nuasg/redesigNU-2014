@@ -2036,3 +2036,6 @@ div.light_square .pp_close {
 #prizes img {
     height: 200px;
 }
+#sponsors .description {
+    margin-bottom: 0;
+}
