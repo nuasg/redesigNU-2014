@@ -2044,3 +2044,9 @@ div.light_square .pp_close {
 #sponsors .description {
     margin-bottom: 0;
 }
+#info h5.itext {
+    margin-bottom: 30px;
+}
+#info .itext {
+    color: #f0f0f0;
+}
