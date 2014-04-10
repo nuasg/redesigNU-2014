@@ -115,7 +115,12 @@ h1.section-title:after,
 }
 
 .sect-4 .title {
-    color: #fff;
+    color: #ffffff;
+}
+
+.itext{
+    color:#ffffff;
+
 }
 
 .description {
