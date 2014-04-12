@@ -2035,11 +2035,13 @@ div.light_square .pp_close {
 }
 .schedule-table .time,
 .schedule-table .event {
-    padding-left: 60px;
+    padding-left: 1.5em;
 }
 
-#prizes img {
-    height: 200px;
+#prizes img,
+#prizes h3.text,
+#prizes h4.title {
+    width: 200px;
 }
 #sponsors .description {
     margin-bottom: 0;
@@ -2049,4 +2051,7 @@ div.light_square .pp_close {
 }
 #info .itext {
     color: #f0f0f0;
+}
+.top-part {
+    margin-top: 10%;
 }
