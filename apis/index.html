@@ -4,6 +4,12 @@
   <meta charset="UTF-8">
   <title>RedesigNU API information</title>
   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <style type="text/css">
+    iframe {
+      width: 800px;
+      height: 400px;
+    }
+  </style>
 </head>
 <body>
 
@@ -14,14 +20,53 @@
         <hr>
 
         <h2>CAESAR Course Data API</h2>
-        <p>Instructions coming soon -- we're working out a way to get keys for everyone.</p>
+        <p class="lead"><a href="course-data-api.html">Quick guide</a></p>
+        <p>Report issues to <a href="mailto:shengwu2014@u.northwestern.edu">Sheng Wu</a>.</p>
+        <h4>Announcements</h4>
+        <ul>
+          <li>CORS issues should be <a href="http://collegecandy.files.wordpress.com/2013/11/large-1.gif">gone</a>!</li>
+          <li>You can now query specific classes using <code>class_num</code> as a parameter for /courses</li>
+          <li>You can now query for instructors by subject -- <a href="course-data-api.html">read the guide</a>. You can also filter courses by term and instructor. </li>
+          <li>Query for specific classes by <code>id</code> (class_num and course_id numbers are not unique)</li>
+        </ul>
+        <h4>Known Issues</h4>
+        <ul>
+          <li>Meeting time/days fields are null: FIXED</li>
+          <li>Lots of classes aren't showing up: FIXED</li>
+          <li>Theatre and Drama classes don't show up (suspicious ampersand in the subject symbol) -- investigating</li>
+          <li>Only one discussion/lab ever shows up for a class: FIXED</li>
+          <li>API doesn't handle courses with multiple instructors properly</li>
+          <li>Instructor metadata can be unstable because fields can be overwritten with nulls</li>
+        </ul>
+        <h4>Features/ideas</h4>
+        <ul>
+          <li>Filter classes by instructor: IMPLEMENTED</li>
+          <li>Filter classes by building/room: future work</li>
+        </ul>
+        
 
 
         <h2>Wildcat Connection API</h2>
         <p class="lead"><a href="http://support.collegiatelink.net/entries/21766580-Documentation-for-Web-Services-API-Version-2-0-">Official Documentation</a></p>
         <p>Public key: <strong>northwestern-07</strong></p>
         <p>After you sign the participants' agreement, your team will be emailed the private key.</p>
-        <p><a href="wildcat_connection_example.py.txt">Example Python program</a></p>
+        <p><a href="wildcat_connection_example.py.txt">Example Python program</a> (requires the <a href="http://docs.python-requests.org/en/latest/">requests</a> library)</p>
+
+
+        <h2>SPAC room usage data</h2>
+        <p>Below, you can download the file <code>spac.csv</code>. It contains a year's worth of data describing how much the different rooms in SPAC are used.</p>
+        <a class="btn btn-default btn-lg" href="spac.csv">spac.csv</a>
+
+        <h2>SafeRide data</h2>
+        <p>TBA</p>
+
+
+        <!--
+        <h2>IRC</h2>
+        <p>Channel: <strong>#redesignu</strong></p>
+        <iframe src="https://webchat.freenode.net/" frameborder="0"></iframe>
+        -->
+
 
         <!--
         <h2>SafeRide data</h2>

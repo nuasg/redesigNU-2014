@@ -15,7 +15,7 @@ hash_val = hashlib.md5(public_key + current_time +\
                        random_string + private_key).hexdigest()
 
 api_url = 'https://northwestern.collegiatelink.net/api/'
-resource = 'users'
+resource = 'organizations'
 params = {
     'time': current_time,
     'apikey': public_key,

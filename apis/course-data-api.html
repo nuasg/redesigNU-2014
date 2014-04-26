@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quick Guide to the Course Data API</title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+    
+      <div class="col-md-9">
+        <h1>Quick Guide to the Course Data API</h1>
+        <p class="lead">This will probably only be accurate during RedesigNU.</p>
+        <p><a href="index.html">Back to APIs</a></p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-9">
+        <h2>Terms</h2>
+        <p>Send a plain GET request with <code>curl</code>, <code>$.getJSON</code>, or what-have-you to the below URL:</p>
+        <pre class="lead">http://vazzak2.ci.northwestern.edu/terms/</pre>
+
+        <h2>Subjects</h2>
+        <pre class="lead">http://vazzak2.ci.northwestern.edu/subjects/</pre>
+
+        <h2>Schools</h2>
+        <pre class="lead">http://vazzak2.ci.northwestern.edu/schools/</pre>
+
+        <h2>Instructors</h2>
+        <pre class="lead">http://vazzak2.ci.northwestern.edu/instructors/</pre>
+        <h3>Parameters</h3>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Required?</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>subject</td>
+              <td>yes</td>
+              <td>The <code>symbol</code> of the subject you want instructors for.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Courses</h2>
+        <pre class="lead">http://vazzak2.ci.northwestern.edu/courses/</pre>
+
+        <h3>Parameters</h3>
+
+        <h4>Request method 1: term and subject</h4>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Required?</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>term</td>
+              <td>yes</td>
+              <td>The <code>term_id</code> of the term for which you want to see classes.</td>
+            </tr>
+            <tr>
+              <td>subject</td>
+              <td>yes</td>
+              <td>The <code>symbol</code> of the subject for which you want to see classes.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h4>Request method 2: term and instructor</h4>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Required?</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>instructor</td>
+              <td>yes</td>
+              <td>The <code>id</code> of the instructor for which you want to see classes.</td>
+            </tr>
+            <tr>
+              <td>term</td>
+              <td>no</td>
+              <td>The <code>term_id</code> of the term for which you want to see classes.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h4>Request method 3: find classes using class_num, course_id</h4>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Required?</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>class_num</td>
+              <td>yes</td>
+              <td>One or more <code>class_num</code>s for courses you want details for.</td>
+            </tr>
+            <tr>
+              <td>course_id</td>
+              <td>no</td>
+              <td>One or more <code>course_id</code>s for courses you want details for.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h4>Request method 4: get specific classes using id</h4>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Parameter</th>
+              <th>Required?</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>id</td>
+              <td>yes</td>
+              <td>One or more <code>id</code>s for courses you want details for.</td>
+          </tbody>
+        </table>
+
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>
