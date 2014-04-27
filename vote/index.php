@@ -17,12 +17,24 @@
         .container {
             background: white;
         }
-        h1 {
+        h1,
+        h2 {
             font-weight: normal;
+        }
+        a:active,
+        a:hover {
+            text-decoration: none;
         }
         .project-img,
         .banner {
             width: 100%;
+        }
+        .project-img {
+            opacity: 0.87;
+            transition: opacity 0.1s ease-in-out;
+        }
+        .project-img:hover {
+            opacity: 1;
         }
         .title {
             margin-bottom: 20px;
@@ -42,12 +54,14 @@
         }
     </style>
 </head>
+
 <body>
 <div class="container">
     <div class="row">
         <img class="banner" src="banner.png" alt="" />
         <div class="col-md-12 text-center title">
             <h1>Check out the finalists and submit your vote!</h1>
+            <p><a href="http://redesignu.challengepost.com/submissions" target="_blank">View all submitted hackathon projects (including non-finalists) on ChallengePost.</a></p>
         </div>
     </div>
 
@@ -55,51 +69,61 @@
 $finalists = array(
     array(
         'link' => '#',
+        'source_link' => 'https://github.com/RedesigNU/Census',
         'img_src' => 'https://i.imgur.com/1zrohl0.png',
         'name' => 'Census',
-        'desc' => "Tired of having no communication with your professor when you're sitting in a huge lecture? Afraid to raise your hand? Don't care enough to? Use Census to tell your professor all he/she wants to know about how they're lecturing.",
+        'desc' => "Use Census to tell your professor all he/she wants to know about how they're lecturing.",
     ),
     array(
         'link' => 'http://christopher-li.github.io/',
+        'source_link' => 'https://github.com/RedesigNU/Chalkboard-Love',
         'img_src' => 'https://i.imgur.com/uy5FpKs.png',
         'name' => 'Chalkboard Love',
         'desc' => 'Chalkboard Love is a snazzy parallax scrolling web-based chalk wall where users and the creators can share what they love about Northwestern.',
     ),
+
     array(
         'link' => '#',
+        'source_link' => 'https://github.com/RedesigNU/Course-Connect',
         'img_src' => 'https://i.imgur.com/Wc3YtYw.jpg',
         'name' => 'Course Connect',
-        'desc' => 'We build you a profile based on your academic history and help you build a better curriculum every single quarter.',
+        'desc' => 'Using machine learning, we build you a profile based on your academic history and help you build a better curriculum every single quarter.',
     ),
     array(
         'link' => 'http://thomasythuang.github.io/redesignu/',
+        'source_link' => 'https://github.com/RedesigNU/CourseDJ',
         'img_src' => 'https://i.imgur.com/101vQ1L.jpg',
         'name' => 'CourseDJ',
         'desc' => 'A handy website for generating great schedules based on what you classes you want to take.',
     ),
     array(
         'link' => 'http://murphy.wot.eecs.northwestern.edu/~xto633/hackathon/',
+        'source_link' => 'https://github.com/RedesigNU/Easy-Plan',
         'img_src' => 'https://i.imgur.com/7xB9AUs.jpg',
         'name' => 'Easy Plan',
         'desc' => 'A simple course search and arrangement system with calendar display.',
     ),
+
     array(
         'link' => 'http://northwesternapp.fulldice.com/',
+        'source_link' => '',
         'img_src' => 'https://i.imgur.com/3aQ3bdG.jpg',
         'name' => 'Northwestern Mobile App',
         'desc' => 'NorthwesternApp combines the services and information most essential to NU students into a mobile app.',
     ),
     array(
         'link' => 'http://onedayinchicago.herokuapp.com/',
+        'source_link' => 'https://github.com/RedesigNU/One-Day-in-Chicago',
         'img_src' => 'https://i.imgur.com/Yjszup5.jpg',
         'name' => 'One Day in Chicago',
         'desc' => 'Let us take the stress out of planning your perfect trip to Chicago!',
     ),
     array(
         'link' => 'http://purple-io.herokuapp.com/',
+        'source_link' => 'https://github.com/RedesigNU/Purpl.io',
         'img_src' => 'https://i.imgur.com/hKng64Q.jpg',
         'name' => 'Purpl.io',
-        'desc' => 'We connect instructors with valuable feedback and insights from their students throughout the quarter as well as provide students an engaging way of connecting with one another outside the classroom.',
+        'desc' => 'We connect instructors with valuable feedback from their students throughout the quarter and give students an engaging way to connect with each other.',
     ),
 );
 
@@ -111,13 +135,13 @@ for ($i = 0; $i < $num_rows; $i++): ?>
     <div class="row project-row">
         <div class="col-md-6">
             <a href="<?php echo $finalists[$range[2*$i]]['link'] ?>" target="_blank"><img class="project-img" src="<?php echo $finalists[$range[2*$i]]['img_src'] ?>"></a>
-            <h2><?php echo $finalists[$range[2*$i]]['name'] ?></h2>
-            <p><?php echo $finalists[$range[2*$i]]['desc'] ?></p>
+            <h2><a href="<?php echo $finalists[$range[2*$i]]['link'] ?>" target="_blank"><?php echo $finalists[$range[2*$i]]['name'] ?></a></h2>
+            <p><?php echo $finalists[$range[2*$i]]['desc'] ?> <a href="<?php echo $finalists[$range[2*$i]]['source_link'] ?>" target="_blank">View source</a></p>
         </div>
         <div class="col-md-6">
             <a href="<?php echo $finalists[$range[2*$i+1]]['link'] ?>" target="_blank"><img class="project-img" src="<?php echo $finalists[$range[2*$i+1]]['img_src'] ?>"></a>
-            <h2><?php echo $finalists[$range[2*$i+1]]['name'] ?></h2>
-            <p><?php echo $finalists[$range[2*$i+1]]['desc'] ?></p>
+            <h2><a href="<?php echo $finalists[$range[2*$i+1]]['link'] ?>" target="_blank"><?php echo $finalists[$range[2*$i+1]]['name'] ?></a></h2>
+            <p><?php echo $finalists[$range[2*$i+1]]['desc'] ?> <a href="<?php echo $finalists[$range[2*$i+1]]['source_link'] ?>" target="_blank">View source</a></p>
         </div>
     </div>
 <?php endfor ?>
