@@ -27,7 +27,7 @@
             margin-bottom: 20px;
         }
         .vote-button,
-        .project-row {
+        .project-row .col-md-6 {
             margin-bottom: 50px;
         }
         .project-row p {
