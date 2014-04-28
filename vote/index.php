@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Vote for the RedesigNU Students' Choice Awards winners!" />
+    <meta property="og:image" content="https://asg.northwestern.edu/redesigNU/vote/prof.png" />
+    <meta property="og:url" content="https://asg.northwestern.edu/redesigNU/vote/" />
+    <meta property="og:description" content="Check out the finalists and submit your vote! $2000 Grand Prize, $1500 Second Place, $1000 Third Place"/>
     <title>Vote for the RedesigNU Students' Choice Awards winners!</title>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
     <style type="text/css">
@@ -61,7 +65,7 @@
 <body>
 <div class="container">
     <div class="row">
-        <img class="banner" src="banner.png" alt="" />
+        <a href=""><img class="banner" src="banner.png" alt="" /></a>
         <div class="col-md-12 text-center title">
             <h1>Check out the finalists and submit your vote!</h1>
             <p class="lead">$2000 Grand Prize, $1500 Second Place, $1000 Third Place</p>
@@ -98,7 +102,7 @@ $finalists = array(
         'source_link' => 'https://github.com/RedesigNU/CourseDJ',
         'img_src' => 'https://i.imgur.com/101vQ1L.jpg',
         'name' => 'CourseDJ',
-        'desc' => 'A handy website for generating great schedules based on what you classes you want to take.',
+        'desc' => 'A handy website for generating great schedules based on what classes you want to take.',
     ),
     array(
         'link' => 'http://murphy.wot.eecs.northwestern.edu/~xto633/hackathon/',
@@ -127,7 +131,7 @@ $finalists = array(
         'source_link' => 'https://github.com/RedesigNU/Purpl.io',
         'img_src' => 'https://i.imgur.com/hKng64Q.jpg',
         'name' => 'Purpl.io',
-        'desc' => 'We connect instructors with valuable feedback from their students throughout the quarter and give students an engaging way to connect with each other. Log in with username marvin@purpl.io and password 123.',
+        'desc' => 'We connect instructors with valuable feedback from their students throughout the quarter and give students an engaging way to connect with each other. Log in with <strong>marvin@purpl.io</strong> and password <strong>123</strong>.',
     ),
 );
 
@@ -140,12 +144,12 @@ for ($i = 0; $i < $num_rows; $i++): ?>
         <div class="col-md-6">
             <a href="<?php echo $finalists[$range[2*$i]]['link'] ?>" target="_blank"><img class="project-img" src="<?php echo $finalists[$range[2*$i]]['img_src'] ?>"></a>
             <h2><a href="<?php echo $finalists[$range[2*$i]]['link'] ?>" target="_blank"><?php echo $finalists[$range[2*$i]]['name'] ?></a></h2>
-            <p><?php echo $finalists[$range[2*$i]]['desc'] ?> <a href="<?php echo $finalists[$range[2*$i]]['source_link'] ?>" target="_blank">View source</a></p>
+            <p><?php echo $finalists[$range[2*$i]]['desc'] ?> <?php if ($finalists[$range[2*$i]]['source_link']): ?><a href="<?php echo $finalists[$range[2*$i]]['source_link'] ?>" target="_blank">View source</a><?php endif ?></p>
         </div>
         <div class="col-md-6">
             <a href="<?php echo $finalists[$range[2*$i+1]]['link'] ?>" target="_blank"><img class="project-img" src="<?php echo $finalists[$range[2*$i+1]]['img_src'] ?>"></a>
             <h2><a href="<?php echo $finalists[$range[2*$i+1]]['link'] ?>" target="_blank"><?php echo $finalists[$range[2*$i+1]]['name'] ?></a></h2>
-            <p><?php echo $finalists[$range[2*$i+1]]['desc'] ?> <a href="<?php echo $finalists[$range[2*$i+1]]['source_link'] ?>" target="_blank">View source</a></p>
+            <p><?php echo $finalists[$range[2*$i+1]]['desc'] ?> <?php if ($finalists[$range[2*$i+1]]['source_link']): ?><a href="<?php echo $finalists[$range[2*$i+1]]['source_link'] ?>" target="_blank">View source</a><?php endif ?></p>
         </div>
     </div>
 <?php endfor ?>
