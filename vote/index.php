@@ -14,6 +14,9 @@
             font-family: 'Museo Slab', Georgia, serif;
             background: #555;
         }
+        .title .lead {
+            margin-bottom: 10px;
+        }
         .container {
             background: white;
         }
@@ -61,6 +64,7 @@
         <img class="banner" src="banner.png" alt="" />
         <div class="col-md-12 text-center title">
             <h1>Check out the finalists and submit your vote!</h1>
+            <p class="lead">$2000 Grand Prize, $1500 Second Place, $1000 Third Place</p>
             <p><a href="http://redesignu.challengepost.com/submissions" target="_blank">View all submitted hackathon projects (including non-finalists) on ChallengePost.</a></p>
         </div>
     </div>
@@ -68,7 +72,7 @@
 <?php
 $finalists = array(
     array(
-        'link' => '#',
+        'link' => 'http://censusapp.meteor.com ',
         'source_link' => 'https://github.com/RedesigNU/Census',
         'img_src' => 'https://i.imgur.com/1zrohl0.png',
         'name' => 'Census',
@@ -83,7 +87,7 @@ $finalists = array(
     ),
 
     array(
-        'link' => '#',
+        'link' => 'http://courseconnect.tk/',
         'source_link' => 'https://github.com/RedesigNU/Course-Connect',
         'img_src' => 'https://i.imgur.com/Wc3YtYw.jpg',
         'name' => 'Course Connect',
@@ -123,7 +127,7 @@ $finalists = array(
         'source_link' => 'https://github.com/RedesigNU/Purpl.io',
         'img_src' => 'https://i.imgur.com/hKng64Q.jpg',
         'name' => 'Purpl.io',
-        'desc' => 'We connect instructors with valuable feedback from their students throughout the quarter and give students an engaging way to connect with each other.',
+        'desc' => 'We connect instructors with valuable feedback from their students throughout the quarter and give students an engaging way to connect with each other. Log in with username marvin@purpl.io and password 123.',
     ),
 );
 
