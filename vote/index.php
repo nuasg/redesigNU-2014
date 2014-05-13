@@ -59,6 +59,9 @@
             padding-top: 15px;
             font-size: 70px;
         }
+        h2 {
+            margin-bottom: 0;
+        }
     </style>
 </head>
 
@@ -67,8 +70,13 @@
     <div class="row">
         <a href=""><img class="banner" src="banner.png" alt="" /></a>
         <div class="col-md-12 text-center title">
-            <h1>Check out the finalists and submit your vote!</h1>
-            <p class="lead">$2000 Grand Prize, $1500 Second Place, $1000 Third Place</p>
+            <h1>Congratulations to the winners!</h1>
+            <h2>Census</h2>
+            <p class="lead">Grand Prize, $2000</p>
+            <h2>One Day in Chicago</h2>
+            <p class="lead">Second Place, $1500</p>
+            <h2>Unofficial Northwestern App</h2>
+            <p class="lead">Third Place, $1000</p>
             <p><a href="http://redesignu.challengepost.com/submissions" target="_blank">View all submitted hackathon projects (including non-finalists) on ChallengePost.</a></p>
         </div>
     </div>
